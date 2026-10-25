@@ -6,8 +6,8 @@ from django.core.validators import MinValueValidator
 class Category(models.Model):
 
     class Kind(models.TextChoices):
-        INCOME = "income", "Income"
-        EXPENSE = "expense", "Expense"
+        INCOME = 'income', 'Income'
+        EXPENSE = 'expense', 'Expense'
 
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
@@ -23,20 +23,20 @@ class Category(models.Model):
     class Meta:
         constraints = [
             models.UniqueConstraint(
-                fields=["user", "name"],
-                name="unique_category_name_per_user"
+                fields=['user', 'name'],
+                name='unique_category_name_per_user'
             )
         ]
 
     def __str__(self):
-        return f"{self.name} ({self.kind})"
+        return f'{self.name} ({self.kind})'
 
 
 class Transaction(models.Model):
 
     class Kind(models.TextChoices):
-        INCOME = "income", "Income"
-        EXPENSE = "expense", "Expense"
+        INCOME = 'income', 'Income'
+        EXPENSE = 'expense', 'Expense'
 
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
@@ -49,7 +49,7 @@ class Transaction(models.Model):
     amount = models.DecimalField(
         max_digits=12,
         decimal_places=2,
-        validators=[MinValueValidator(0.01)]
+        validators=[MinValueValidator('0.01')]
     )
     kind = models.CharField(
         max_length=10,
@@ -63,7 +63,7 @@ class Transaction(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        ordering = ["-date"]
+        ordering = ['-date']
 
     def __str__(self):
-        return f"{self.date} - {self.kind} - {self.amount}"
+        return f'{self.date} - {self.kind} - {self.amount}'
