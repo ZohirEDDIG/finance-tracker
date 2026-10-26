@@ -1,0 +1,35 @@
+Date, Description , Amount 
+01/10/2026,  Salary payment  , 2500.00 
+02/10/2026,Coffee shop,-4.50
+03/10/2026,Grocery store,"-1,250.50"
+04/10/2026,Online freelance work,850.00
+05/10/2026,  Taxi ride ,-$12.00
+06/10/2026,Internet bill,-35.00
+07/10/2026,Book purchase,-45.00
+08/10/2026,Refund from shop,45.00
+09/10/2026,Restaurant lunch,-18.75
+10/10/2026,Electricity bill,-320.00
+11/10/2026,Freelance project," 1,250.50 "
+12/10/2026,Bus ticket,-6.00
+13/10/2026,Phone recharge,-20.00
+14/10/2026,Gym membership,-25.00
+15/10/2026,  Salary payment  , 2500.00 
+16/10/2026,Supermarket,-$45.00
+17/10/2026,Gift received,100.00
+31/02/2026,Invalid date example,-15.00
+abc,Another bad date,25.00
+19/10/2026,Amount with spaces, - 75.00 
+20/10/2026,Streaming subscription,-9.99
+21/10/2026,Client payment,900.00
+22/10/2026,Pharmacy,-32.40
+23/10/2026,Duplicate coffee row,-4.50
+02/10/2026,Coffee shop,-4.50
+24/10/2026,Cash deposit,300.00
+25/10/2026,Water bill,-80.00
+26/10/2026,  ,  
+27/10/2026,Invalid amount example,not-a-number
+28/10/2026,Zero amount example,0.00
+29/10/2026,Car repair,-150.00
+30/10/2026,  Market purchase   , -$22.50 
+,,
+31/10/2026,Bonus payment,500.00
