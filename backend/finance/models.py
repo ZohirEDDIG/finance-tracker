@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.db import models
 from django.core.validators import MinValueValidator
-
+from decimal import Decimal
 
 class Category(models.Model):
 
@@ -49,7 +49,7 @@ class Transaction(models.Model):
     amount = models.DecimalField(
         max_digits=12,
         decimal_places=2,
-        validators=[MinValueValidator('0.01')]
+        validators=[MinValueValidator(Decimal('0.01'))]
     )
     kind = models.CharField(
         max_length=10,
