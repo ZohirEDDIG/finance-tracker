@@ -60,3 +60,31 @@ class TransactionSerializer(serializers.ModelSerializer):
             })
 
         return data
+
+class AnalyticsQuerySerializer(serializers.Serializer):
+    date_from = serializers.DateField(required=False)
+    date_to = serializers.DateField(required=False)
+
+    limit = serializers.IntegerField(
+            required=False,
+            min_value=1,
+            max_value=50,
+            default=5,
+    )
+
+    kind = serializers.ChoiceField(
+        choices=['income', 'expense'],
+        required=False,
+        default='expense',
+    )
+
+    def validate(self, attrs):
+        date_from = attrs.get('date_from')
+        date_to = attrs.get('date_to')
+
+        if date_from and date_to and date_from > date_to:
+            raise serializers.ValidationError({
+                'date_to': 'Must be on or after date_from.'
+            })
+
+        return attrs
