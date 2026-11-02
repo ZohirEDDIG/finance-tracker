@@ -76,7 +76,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
                 }
             } finally {
                 if (isMounted) {
-                    setLoadin(false);
+                    setLoading(false);
                 }
             }
         }
