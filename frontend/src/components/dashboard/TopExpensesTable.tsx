@@ -11,8 +11,8 @@ export default function TopExpensesTable({
     loading,
 }: TopExpensesTableProps) {
     return (
-        <section className='overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900'>
-            <div className='border-b border-gray-200 p-5 dark:border-gray-800'>
+        <section className='overflow-hidden rounded-xl border border-hero-fg bg-hero-bg'>
+            <div className='border-b border-hero-fg p-5'>
                 <h2 className='text-lg font-semibold'>Top expenses</h2>
             </div>
 
@@ -21,7 +21,7 @@ export default function TopExpensesTable({
                     {Array.from({ length: 5 }).map((_, index) => (
                         <div
                             key={index}
-                            className='h-8 animate-pulse rounded bg-gray-100 dark:bg-gray-800'
+                            className='h-8 animate-pulse rounded bg-hero-fg'
                         />
                     ))}
                 </div>
@@ -32,7 +32,7 @@ export default function TopExpensesTable({
             ) : (
                 <div className='overflow-x-auto'>
                     <table className='w-full text-left text-sm'>
-                        <thead className='bg-gray-50 text-gray-500 dark:bg-gray-800'>
+                        <thead className='bg-hero-bg text-gray-500'>
                             <tr>
                                 <th className='px-5 py-3 font-medium'>Date</th>
                                 <th className='px-5 py-3 font-medium'>
@@ -47,7 +47,7 @@ export default function TopExpensesTable({
                             </tr>
                         </thead>
 
-                        <tbody className='divide-y divide-gray-100 dark:divide-gray-800'>
+                        <tbody className='divide-y divide-hero-fg'>
                             {data.map((expense, index) => (
                                 <tr key={`${expense.date}-${index}`}>
                                     <td className='whitespace-nowrap px-5 py-4'>

@@ -24,12 +24,12 @@ const COLORS = [
 export default function CategoryChart({ data, loading }: CategoryChartProps) {
     if (loading) {
         return (
-            <div className='h-80 animate-pulse rounded-xl bg-gray-100 dark:bg-gray-800' />
+            <div className='h-80 animate-pulse rounded-xl bg-hero-fg' />
         );
     }
 
     return (
-        <section className='rounded-xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-gray-900'>
+        <section className='rounded-xl border border-hero-fg bg-hero-bg p-5'>
             <h2 className='mb-6 text-lg font-semibold'>Expenses by category</h2>
 
             {data.length === 0 ? (
