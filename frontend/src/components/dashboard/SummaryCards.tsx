@@ -18,10 +18,10 @@ export default function SummaryCards({ summary, loading }: SummaryCardsProps) {
                 {Array.from({ length: 4 }).map((_, index) => (
                     <div
                         key={index}
-                        className='animate-pulse rounded-xl border border-gray-200 p-5 dark:border-gray-800'
+                        className='animate-pulse rounded-xl border border-hero-fg p-5'
                     >
-                        <div className='h-4 w-24 rounded bg-gray-200 dark:bg-gray-700' />
-                        <div className='mt-4 h-8 w-32 rounded bg-gray-200 dark:bg-gray-700' />
+                        <div className='h-4 w-24 rounded bg-gray-200' />
+                        <div className='mt-4 h-8 w-32 rounded bg-gray-200' />
                     </div>
                 ))}
             </div>
@@ -55,7 +55,7 @@ export default function SummaryCards({ summary, loading }: SummaryCardsProps) {
             {items.map((item) => (
                 <div
                     key={item.label}
-                    className='rounded-xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900'
+                    className='rounded-xl border border-hero-fg bg-hero-bg p-5 shadow-sm'
                 >
                     <p className='text-sm text-gray-500'>{item.label}</p>
                     <p className={`mt-3 text-2xl font-bold ${item.color}`}>

@@ -79,32 +79,32 @@ export default function DateRangeFilter({
     }
 
     return (
-        <section className='rounded-xl border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-800 dark:bg-gray-900'>
+        <section className='rounded-xl border border-hero-fg bg-hero-bg p-4 shadow-sm'>
             <div className='flex flex-wrap items-center justify-between gap-3'>
                 <h2 className='font-semibold'>Date range</h2>
 
                 <div className='flex flex-wrap gap-2'>
                     <button
                         onClick={() => applyPreset('month')}
-                        className='filter-button'
+                        className='border border-gray-600 p-2 rounded-md shadow-md transition hover:border-hero-fg'
                     >
                         This month
                     </button>
                     <button
                         onClick={() => applyPreset('3months')}
-                        className='filter-button'
+                        className='border border-gray-600 p-2 rounded-md shadow-md transition hover:border-hero-fg'
                     >
                         Last 3 months
                     </button>
                     <button
                         onClick={() => applyPreset('year')}
-                        className='filter-button'
+                        className='border border-gray-600 p-2 rounded-md shadow-md transition hover:border-hero-fg'
                     >
                         This year
                     </button>
                     <button
                         onClick={() => applyPreset('all')}
-                        className='filter-button'
+                        className='border border-gray-600 p-2 rounded-md shadow-md transition hover:border-hero-fg'
                     >
                         All time
                     </button>
@@ -118,7 +118,7 @@ export default function DateRangeFilter({
                         type='date'
                         value={from}
                         onChange={(e) => updateRange(e.target.value, to)}
-                        className='rounded-lg border border-gray-300 bg-transparent px-3 py-2 dark:border-gray-700'
+                        className='border border-gray-600 p-2 rounded-md shadow-md transition hover:border-hero-fg'
                     />
                 </label>
 
@@ -128,13 +128,13 @@ export default function DateRangeFilter({
                         type='date'
                         value={to}
                         onChange={(e) => updateRange(from, e.target.value)}
-                        className='rounded-lg border border-gray-300 bg-transparent px-3 py-2 dark:border-gray-700'
+                        className='border border-gray-600 p-2 rounded-md shadow-md transition hover:border-hero-fg'
                     />
                 </label>
 
                 <button
                     onClick={reset}
-                    className='rounded-lg border border-gray-300 px-4 py-2 text-sm hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-800'
+                    className='border border-gray-600 p-2 rounded-md shadow-md transition hover:border-hero-fg'
                 >
                     Reset
                 </button>

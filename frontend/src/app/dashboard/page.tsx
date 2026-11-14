@@ -32,7 +32,7 @@ export default function DashboardPage() {
 
     return (
         <RequireAuth>
-            <main className='min-h-screen space-y-6 bg-gray-50 p-4 text-gray-900 dark:bg-gray-950 dark:text-white md:p-8'>
+            <main className='min-h-screen space-y-6 bg-hero-bg p-4 text-gray-500 md:p-8'>
                 <header className='flex flex-wrap items-center justify-between gap-4'>
                     <div>
                         <h1 className='text-2xl font-bold'>Dashboard</h1>
@@ -56,7 +56,7 @@ export default function DashboardPage() {
                 />
 
                 {error && (
-                    <div className='flex items-center justify-between rounded-lg bg-red-50 p-4 text-sm text-red-700 dark:bg-red-950 dark:text-red-300'>
+                    <div className='flex items-center justify-between rounded-lg bg-red-50 p-4 text-sm text-red-700'>
                         <p>{error}</p>
                         <button
                             onClick={refetch}
